@@ -108,7 +108,7 @@ More details about ActionNormalizer, ResetWrapper, and TimeLimitWrapper can be f
     The code in [load_demos.py](./utils/load_demos.py) will be useful when you want to generate mp4 files as comparisons for humans to provide feedback in preference-based learning.
 
 ## Project Assignment
-###1. Recover reward function via preference-based learning
+### 1. Recover reward function via preference-based learning
 * create a file named pref_learn.py under the directory of [alg](./alg/).
 * in this pref_learn.py script, write your code to recover the reward function for the robot food-serving task using the [APReL](https://github.com/Stanford-ILIAD/APReL) library:
   * design your own features of the recovered reward and implement the feature function given an episodic trajectory
@@ -119,7 +119,7 @@ More details about ActionNormalizer, ResetWrapper, and TimeLimitWrapper can be f
     More specifically, the human teacher is allowed to give feedback on 10 comparison queries in total. More code-wise procedures can be found in simple.py of APReL.
   * save the learned weights for your designed reward feature as a csv file named "final_feature_weights" under the directory of alg.
 
-###2. Policy training via RL from Demonstrations with the learned reward function
+### 2. Policy training via RL from Demonstrations with the learned reward function
 * create a file named policy_learn.py under the diretory of [alg](./alg/).
 * in this policy_learn.py, write your code to learn robot control policy using RL from Demonstrations with your learned reward function:
   * choose your favorite RLfD method (e.g., AWAC) as the underlying policy learning algorithm
@@ -137,7 +137,7 @@ More details about ActionNormalizer, ResetWrapper, and TimeLimitWrapper can be f
     * roll out your saved policy model of the current training step
     * check whether the robot succeeded or not for the current test run
 
-###(Optional) Extra credits:
+### (Optional) Extra credits:
 * Realize online policy training with RLfD and preference-based learning, and report your results. In other words, there will be no two separate phases for training. Instead, during every episode of the learning loop, the robot will:
   * ask for human feedback on certain amount of trajectory-pair comparisons
   * recover a new reward function for the current training episode
